@@ -2,16 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="snitch.lol" />
-    <meta property="og:description" content="best bio link" />
-    <meta property="og:url" content="https://snitch.lol/">
-    <title>snitch.lol</title>
-    <link rel="icon" type="image/x-icon" href="https://betray.vip/assets/betrayicon.gif">
-    <link href="https://cdn.sellix.io/static/css/embed.css" rel="stylesheet"/>
+    <title>snitch.lol ⎮ 404</title>
+    <link rel="icon" type="image/x-icon" href="https://snitch.lol/assets/danger.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-    <script src="https://cdn.sellix.io/static/js/embed.js"></script>
     <script>
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         if (isMobile) {
@@ -44,7 +38,7 @@
             --color-heading: hsl(30, 50%, 98%);
             --color-text: hsla(0, 0%, 92%, .9);
         }
-
+        
         img {
             -webkit-user-drag: none;
             user-drag: none;
@@ -52,10 +46,10 @@
         }
 
         body {
-            cursor: url('https://betray.vip/assets/mouse.cur'), auto;
+            cursor: url('https://snitch.lol/assets/mouse.cur'), auto;
             user-select: none;
             font-family: var(--font-family);
-            background-color: var(--color-background);
+            background-color: #080808;
             color: var(--color-text);
             margin: 0;
             padding: 0;
@@ -69,74 +63,46 @@
             text-align: center;
         }
 
-        .glow {
-            color: var(--color-heading);
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
-                         0 0 20px rgba(255, 255, 255, 0.5),
-                         0 0 30px rgba(255, 255, 255, 0.3);
+        .icon {
+            display: block;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
         }
 
-        @keyframes fadeinmenu {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        .message {
+            font-size: 24px;
+            margin-bottom: 10px;
         }
 
-        ::-webkit-scrollbar {
-            width: 2px;
-            height: 2px;
+        .sub-message {
+            font-size: 16px;
+            color: var(--color-border);
         }
 
-        .menu-buttons {
-            margin-top: 20px;
-        }
-
-        .menu-button button {
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #161616;
+            color: #fff;
             border: none;
-            background: none;
-            color: inherit;
-            font: inherit;
-            padding: 0;
+            border-radius: 5px;
             cursor: pointer;
-            margin-left: 20px;
-            font-size: 20px;
-            animation: fadeinmenu 2s forwards;
+            margin-top: 20px;
+            text-decoration: none;
         }
 
-        footer {
-                background-color: rgba(0, 0, 0, 0);
-                text-align: center;
-                color: white;
-                font-size: 14px;
-                padding: 10px 0;
-                margin-top: auto;
-                position: fixed;
-                left: 0;
-                right: 0;
-                bottom: 0;
-            }
+        .button:hover {
+            background-color: rgba(15, 15, 15, 0.829);
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="glow">snitch.lol</h1>
-<div class="menu-button">
-    <button
-        data-sellix-group="6638e83314e73"
-        type="submit"
-        alt="Buy Now with sellix.io">
-        buy
-    </button>
-          <button class="menu-button" onclick="window.open('https://discord.gg/snitchbio')">discord</button>
-            <button class="menu-button" onclick="window.open('https://snitch.lol/list')">previews</button>
-            <footer>
-                <div style="color:white;">
-                    snitch.lol private bio link, still in the making
-                </div>
-        </div>
+        <img src="https://snitch.lol/assets/danger.png" alt="Icon" class="icon">
+        <div class="message">404</div>
+        <div class="sub-message">page could not be found.</div>
+        <a href="https://snitch.lol/" class="button">go back</a>
     </div>
 </body>
 </html>
