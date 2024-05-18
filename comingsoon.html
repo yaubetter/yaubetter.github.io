@@ -6,24 +6,6 @@
     <title>snitch.lol ⎮ coming soon</title>
     <link rel="icon" type="image/x-icon" href="https://snitch.lol/assets/danger.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-    <script>
-        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        if (isMobile) {
-            window.location.href = "https://snitch.lol/notsupported";
-        }
-    </script>
-    <script>
-    document.addEventListener('keydown', function(event) {
-        if (event.ctrlKey && event.shiftKey) {
-            event.preventDefault();
-        }
-    });
-    </script>
-    <script>
-    document.addEventListener("contextmenu", function (e) {
-        e.preventDefault();
-    });
-    </script>
     <style>
         :root {
             --font-family: "Poppins", sans-serif;
@@ -60,6 +42,13 @@
             text-align: center;
         }
 
+        .icon {
+            display: block;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+        }
+
         .message {
             font-size: 24px;
             margin-bottom: 10px;
@@ -89,10 +78,29 @@
 </head>
 <body>
     <div class="container">
+        <img src="https://snitch.lol/assets/danger.png" alt="Icon" class="icon">
         <div class="message">coming soon</div>
         <div class="sub-message">snitch.lol is not out yet, it will be releasing soon.</div>
         <a href="https://snitch.lol/" class="button">go back</a>
         <a href="https://discord.gg/snitchbio" class="button">discord</a>
     </div>
+    <script>
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        if (isMobile) {
+            window.location.href = "https://snitch.lol/notsupported";
+        }
+    </script>
+    <script>
+    document.addEventListener('keydown', function(event) {
+        if (event.ctrlKey && event.shiftKey) {
+            event.preventDefault();
+        }
+    });
+    </script>
+    <script>
+    document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+    });
+    </script>
 </body>
 </html>
