@@ -46,9 +46,10 @@
         <div class="message">😕</div>
         <div class="sub-message">unkown page.</div>
     </div>
-    <script>
-       document.addEventListener('keydown', function(event) {if (event.ctrlKey && event.shiftKey) {event.preventDefault();}});
-       document.addEventListener("contextmenu", function (e) {e.preventDefault();});
-    </script>
+<script>
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);if (isMobile) {window.location.href = "https://snitch.lol/notsupported";}
+    document.addEventListener('keydown', function(event) {if (event.ctrlKey && event.shiftKey) {event.preventDefault();}});
+    document.addEventListener("contextmenu", function (e) {e.preventDefault();});
+ </script>
 </body>
 </html>
