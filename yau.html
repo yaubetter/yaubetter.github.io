@@ -6,10 +6,10 @@
     <link rel="icon" type="image/x-icon" href="https://snitch.lol/assets/snitch.png">
     <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-    <title>@yau</title>
+    <title>snitch.lol</title>
     <meta property="og:title" content="@yau">
     <meta property="og:description" content="you snitch">
-    <meta property="og:image" content="https://snitch.lol/assets/yaupfp.jpg">
+    <meta property="og:image" content="https://snitch.lol/assets/yaupfp.png">
     <meta property="og:url" content="https://snitch.lol/">
     <meta property="theme-color" content="#2b2d31">
     <style>
@@ -224,7 +224,6 @@
     </style>
 </head>
 <body>
-    
 <video id="backgroundVideo" autoplay loop muted style="position: fixed; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1;"><source src="" type="video/mp4"></video>
 <audio id="music" src="https://snitch.lol/assets/999.mp3" loop></audio>
 <img id="background" src="https://snitch.lol/assets/background.png">
@@ -232,15 +231,15 @@
 <div class="splash" id="splash"><div class="splash-text">?</div></div>
 
 <div class="profile" id="profilebox">
-    <img src="https://snitch.lol/assets/yaupfp.jpg" class="pfp">
+    <img src="https://snitch.lolassets/yaupfp.jpg" class="pfp">
     <div class="username-container">
         <p class="username breath">yau</p>
         <img src="https://snitch.lol/assets/sparkles/white.gif" class="sparkle">
     </div>
     <div class="badge-container">
-        <div class="badge-tooltip" style="position: relative;"><span class="badge" style="content:url(https://snitch.lol/assets/badge/owner.png)"></span><span class="tooltip">Owner</span></div>
-        <div class="badge-tooltip" style="position: relative;"><span class="badge" style="content:url(https://snitch.lol/assets/badge/devloper.png)"></span><span class="tooltip">Developer</span></div>
-        <div class="badge-tooltip" style="position: relative;"><span class="badge" style="content:url(https://snitch.lol/assets/badge/verified.png)"></span><span class="tooltip">Verified</span></div>
+        <div class="badge-tooltip" style="position: relative;"><span class="badge" style="content:url(https://snitch.lolassets/badge/owner.png)"></span><span class="tooltip">Owner</span></div>
+        <div class="badge-tooltip" style="position: relative;"><span class="badge" style="content:url(https://snitch.lolassets/badge/devloper.png)"></span><span class="tooltip">Developer</span></div>
+        <div class="badge-tooltip" style="position: relative;"><span class="badge" style="content:url(https://snitch.lolassets/badge/verified.png)"></span><span class="tooltip">Verified</span></div>
     </div>
     <p class="desc">your a snitch</p>
 </div>
@@ -276,5 +275,10 @@
   colors: ["#000000", "#FFFFFF", "#000000"],
 });
 </script>
+<script>
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);if (isMobile) {window.location.href = "https://snitch.lol/notsupported";}
+    document.addEventListener('keydown', function(event) {if (event.ctrlKey && event.shiftKey) {event.preventDefault();}});
+    document.addEventListener("contextmenu", function (e) {e.preventDefault();});
+ </script>
 </body>
 </html>
