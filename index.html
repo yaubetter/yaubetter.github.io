@@ -1,128 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=0.6"/>
     <link rel="icon" type="image/x-icon" href="https://snitch.lol/assets/snitch.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
     <title>snitch.lol</title>
     <meta property="og:title" content="snitch.lol">
-    <meta property="og:description" content="best bio link">
+    <meta property="og:description" content="enhance your bio with snitch.lol">
     <meta property="og:image" content="https://snitch.lol/assets/snitch.png">
     <meta property="og:url" content="https://snitch.lol/">
     <meta property="theme-color" content="#2b2d31">
-    <style>
-        :root {
-            --font-family: "IBM Plex Mono", monospace;
-            --color-background: hsl(0, 0%, 3%);
-            --color-background-soft: hsl(0, 0%, 7%);
-            --color-background-mute: hsl(0, 0%, 13%);
-            --color-border: hsla(0, 0%, 33%, .65);
-            --color-border-hover: hsla(0, 0%, 33%, .65);
-            --color-heading: hsl(30, 50%, 98%);
-            --color-text: hsla(0, 0%, 92%, .9);
-        }
-
-        body {
-            cursor: url('https://snitch.lol/assets/mouse.cur'), auto;
-            display: flex;
-            background-color: #000000;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-            user-select: none;
-            margin: 0;
-            font-family: var(--font-family);
-        }
-
-        @keyframes breathing {
-            0% {
-                background-position: 150%;
-            }
-            100% {
-                background-position: -50%;
-            }
-        }
-
-        .breath {
-            background: linear-gradient(90deg, #ffffff 30%, #000000 50%, #ffffff 70%);
-            background-size: 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: breathing 100s linear infinite;
-        }
-        
-        .snitch {
-            color: rgb(0, 0, 0);
-            text-align: center;
-            font-size: 16px;
-            position: relative;
-            margin-bottom: 20px;
-            animation: breathing 1s linear infinite;
-        }
-
-        .button-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .button {
-            margin: 5px;
-            color: white;
-            font-size: 16px;
-            text-align: center;
-            text-decoration: none;
-            text-shadow: 0 0 10px rgb(255, 255, 255);
-        }
-    </style>
 </head>
+<style>
+    :root {
+        --font-family: "Poppins", sans-serif;
+        --color-background: hsl(0, 0%, 3%);
+        --color-background-tint: hsl(0, 0%, 2%);
+        --color-background-dark: hsl(0, 0%, 0%);
+        --color-background-soft: hsl(0, 0%, 7%);
+        --color-background-mute: hsl(0, 0%, 13%);
+        --color-border: hsl(0, 0%, 9%);
+        --color-border-hover: hsla(0, 0%, 33%, 0.65);
+        --color-heading: hsl(30, 50%, 98%);
+        --color-text: hsla(0, 0%, 92%, 0.9);
+    }
+    body {
+        font-family: var(--font-family);
+        color: var(--color-text);
+        background-color: var(--color-background-dark);
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        min-width: 800px;
+        min-height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        user-select: none;
+        position: relative;
+    }
+    @keyframes breathing {
+         0% {
+            background-position: 150%;
+        }
+        100% {
+            background-position: -50%;
+        }
+    }
+    .breath {
+        background: linear-gradient(90deg, #8b8b8b 30%, #000000 50%, #8b8b8b 70%);
+        background-size: 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: breathing 100s linear infinite;
+    }
+    .snitch {
+        text-align: center;
+        font-size: 50px;
+        position: center;
+        margin-top: 400px;
+        animation: breathing 2s linear infinite;
+    }
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: -60px;
+    }
+    .button {
+        margin: 10px;
+        color: rgb(151, 151, 151);
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+    }
+</style>
 <body>
-<audio autoplay loop><source src="https://snitch.lol/assets/landingmusic.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
-<pre class="snitch breath">
-
-                                                       
-                                               /       
-                        #                    #/        
-                       ###     #             ##        
-                        #     ##             ##        
-                              ##             ##        
-   /###   ###  /###   ###   ######## /###    ##  /##   
-  / #### / ###/ #### / ### ######## / ###  / ## / ###  
- ##  ###/   ##   ###/   ##    ##   /   ###/  ##/   ### 
-####        ##    ##    ##    ##  ##         ##     ## 
-  ###       ##    ##    ##    ##  ##         ##     ## 
-    ###     ##    ##    ##    ##  ##         ##     ## 
-      ###   ##    ##    ##    ##  ##         ##     ## 
- /###  ##   ##    ##    ##    ##  ###     /  ##     ## 
-/ #### /    ###   ###   ### / ##   ######/   ##     ## 
-   ###/      ###   ###   ##/   ##   #####     ##    ##  
-</pre>
+<pre class="snitch breath">snitch.lol</pre>
 <div class="button-container">
-    <a href="https://snitch.lol/comingsoon" class="button">login /</a>
-    <a href="https://snitch.lol/comingsoon" class="button"> register /</a>
-    <a href="https://discord.gg/snitchbio" class="button"> discord</a>
+    <a href="https://snitch.lol/login" class="button">login</a>
+    <a href="https://snitch.lol/register" class="button">register</a>
+    <a href="https://discord.gg/snitchbio" class="button">discord</a>
 </div>
 </body>
-<script>
-    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    if (isMobile) {
-        window.location.href = "https://snitch.lol/notsupported";
-    }
-</script>
-<script>
-document.addEventListener('keydown', function(event) {
-    if (event.ctrlKey && event.shiftKey) {
-        event.preventDefault();
-    }
-});
-</script>
-<script>
-document.addEventListener("contextmenu", function (e) {
-    e.preventDefault();
-});
-</script>
 </html>
