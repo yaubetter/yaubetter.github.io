@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=0.6"/>
     <link rel="icon" type="image/x-icon" href="https://snitch.lol/assets/snitch.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@758&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-    <title>@yau</title>
+    <title>snitch.lol ⎮ yau</title>
     <meta property="og:title" content="@yau">
     <meta property="og:description" content="you snitch">
     <meta property="og:image" content="https://snitch.lol/assets/yaupfp.png">
@@ -14,7 +16,7 @@
     <meta property="theme-color" content="#2b2d31">
     <style>
     :root {
-        --font-family: "Poppins", sans-serif;
+        --font-family: "Unbounded", sans-serif;
         --color-background: hsl(0, 0%, 3%);
         --color-background-tint: hsl(0, 0%, 2%);
         --color-background-dark: hsl(0, 0%, 0%);
@@ -24,6 +26,7 @@
     }
 
     body {
+        cursor: url('https://snitch.lol/assets/cursor/small.cur'), auto;
         user-select: none;
         font-family: var(--font-family);
         background-color: var(--color-background);
@@ -97,8 +100,9 @@
         transform: translate(-50%, -50%);
         background-color: #00000098;
         border: 2px solid #5853531f;
-        width: 400px;
-        height: 270px;
+        width: 440px;
+        max-width: 90%;
+        height: 300px;
         padding: 20px;
         border-radius: 8px;
         backdrop-filter: blur(16px);
@@ -106,6 +110,44 @@
         z-index: 9999;
         overflow: hidden;
         text-align: center;
+        animation: fadeIn 0.5s ease;
+        transition: transform 0.3s ease;
+    }
+
+    .uid-countainer {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #00000042;
+        border: 2px solid #58535328;
+        border-radius: 10px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    .uid-text {
+        color: #575757;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .view-container {
+        position: absolute;
+        top: 10px;
+        right: 53px;
+        background-color: #00000042;
+        border: 2px solid #58535328;
+        border-radius: 10px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    .view-text {
+        color: #575757;
+        font-size: 14px;
+        font-weight: 500;
     }
 
     .pfp {
@@ -131,10 +173,10 @@
         0% {
             background-position: 150%;
         }
-        50% {
-            background-position: 50%;
+        40% {
+            background-position: 40%;
         }
-        100% {
+        50% {
             background-position: -50%;
         }
     }
@@ -171,7 +213,7 @@
         border-radius: 40px;
         padding: 5px;
         margin-top: -10px;
-        margin-left: 156px;
+        margin-left: 176px;
         max-width: 120px;
         width: fit-content;
     }
@@ -221,27 +263,74 @@
         font-weight: 500;
         color: #f1f1f1bd;
     }
+
+    .socials {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .socials .button {
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .socials .button:hover {
+        transform: scale(1.1);
+    }
+
+    .socials .button svg {
+        width: 30px;
+        height: 30px;
+        fill: #fff;
+        filter: drop-shadow(0 0 10px rgb(255, 255, 255));
+        transition: filter 0.3s ease;
+    }
     </style>
 </head>
 <body>
-<video id="backgroundVideo" autoplay loop muted style="position: fixed; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1;"><source src="" type="video/mp4"></video>
+<video id="backgroundVideo" autoplay loop muted style="position: fixed; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1;"><source src="https://snitch.lol/assets/999.mp4" type="video/mp4"></video>
 <audio id="music" src="https://snitch.lol/assets/999.mp3" loop></audio>
-<img id="background" src="https://snitch.lol/assets/background.png">
+<img id="background" src="">
 
 <div class="splash" id="splash"><div class="splash-text">?</div></div>
 
 <div class="profile" id="profilebox">
+
+    <div class="uid-countainer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="#575757" d="m5.41 21l.71-4h-4l.35-2h4l1.06-6h-4l.35-2h4l.71-4h2l-.71 4h6l.71-4h2l-.71 4h4l-.35 2h-4l-1.06 6h4l-.35 2h-4l-.71 4h-2l.71-4h-6l-.71 4zM9.53 9l-1.06 6h6l1.06-6z"/></svg>        
+        <span class="uid-text">1</span>
+    </div>
+
+    <div class="view-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="#575757" d="M12 9a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5a5 5 0 0 1 5-5a5 5 0 0 1 5 5a5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>        <span class="view-text">1,213</span>
+    </div>
+
     <img src="https://snitch.lol/assets/yaupfp.jpg" class="pfp">
+
     <div class="username-container">
         <p class="username breath">yau</p>
         <img src="https://snitch.lol/assets/sparkles/white.gif" class="sparkle">
     </div>
+
     <div class="badge-container">
         <div class="badge-tooltip" style="position: relative;"><span class="badge" style="content:url(https://snitch.lol/assets/badge/owner.png)"></span><span class="tooltip">Owner</span></div>
         <div class="badge-tooltip" style="position: relative;"><span class="badge" style="content:url(https://snitch.lol/assets/badge/devloper.png)"></span><span class="tooltip">Developer</span></div>
         <div class="badge-tooltip" style="position: relative;"><span class="badge" style="content:url(https://snitch.lol/assets/badge/verified.png)"></span><span class="tooltip">Verified</span></div>
     </div>
+
     <p class="desc">your a snitch</p>
+    <div class="socials">
+        <div class="button"><a href="https://snitch.lol/"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24"><path fill="white" d="M2.252 8A8.014 8.014 0 0 0 2 10c0 .69.088 1.36.252 2H5.1a19.83 19.83 0 0 1 0-4zm.818-2h2.346c.266-1.217.65-2.307 1.121-3.214A8.035 8.035 0 0 0 3.07 6m14.678 2H14.9a19.83 19.83 0 0 1 0 4h2.848a8.047 8.047 0 0 0 0-4m-.818-2a8.035 8.035 0 0 0-3.467-3.214c.472.907.855 1.997 1.121 3.214zM7.112 8A17.763 17.763 0 0 0 7 10c0 .685.038 1.355.112 2h5.776a17.763 17.763 0 0 0 0-4zm.358-2h5.06a10.758 10.758 0 0 0-.783-2.177C11.119 2.568 10.447 2 10 2c-.448 0-1.119.568-1.747 1.823c-.315.632-.58 1.367-.783 2.177m-4.4 8a8.035 8.035 0 0 0 3.467 3.214c-.472-.907-.855-1.997-1.121-3.214zm13.86 0h-2.346c-.266 1.217-.65 2.307-1.121 3.214A8.035 8.035 0 0 0 16.93 14m-9.46 0c.203.81.468 1.545.783 2.177C8.881 17.432 9.553 18 10 18c.448 0 1.119-.568 1.747-1.823c.315-.632.58-1.367.783-2.177zM10 20C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10s-4.477 10-10 10"/></svg></a></div>
+        <div class="button"><a href="https://discord.gg/snitchbio"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="white" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02M8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12m6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12"/></svg></a></div>
+        <div class="button"><a href="https://last.fm/user/ethtaker"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 8c-.83-1-1.388-1-2-1s-2 .271-2 2s1.384 2.233 3 3s2.125 1.812 2 3s-1 2-3 2s-3-1-3.5-2s-1.585-4.78-2.497-6a5 5 0 1 0-1 7"/></svg></a></div>
+    </div>
 </div>
 
 <div class="snitch-credit" id="snitchCredit">
